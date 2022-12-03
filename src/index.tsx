@@ -18,6 +18,6 @@ root.render(
   </ChakraProvider>
 );
 
-export const sleep = async () => {
-  return new Promise((resolve) => setTimeout(resolve, 3000));
+export const sleep = async (ms = 3000) => {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 };

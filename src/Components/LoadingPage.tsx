@@ -37,6 +37,7 @@ const Loading = () => {
               flexDirection={"column"}
               justifyContent={"center"}
               alignItems={"center"}
+              p="10"
             >
               <Spinner size={"lg"} />
               <Heading as="h2" size="md" noOfLines={1} mt={5}>
