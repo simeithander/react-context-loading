@@ -27,6 +27,7 @@ const CreateUser = () => {
   const bgFlex = useColorModeValue("gray.50", "gray.800");
   const bgStack = useColorModeValue("white", "gray.700");
 
+  // Função que obtem os dados da API no carregamento da página
   const handleGetData = async () => {
     setLoadingText("form");
     await sleep();

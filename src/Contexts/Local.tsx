@@ -5,11 +5,7 @@ import {
   SetStateAction,
   useState,
 } from "react";
-
-interface IUser {
-  name: string;
-  email: string;
-}
+import { IUser } from "./Global";
 
 interface ILocalContextAPI {
   users: IUser[];

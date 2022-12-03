@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { ContextAPI } from "../Contexts/Global";
 
 const LoadingComponent = () => {
-  // Context
+  // Context global
   const { loading, loadingText } = useContext(ContextAPI);
   return (
     <Fade in={loading}>

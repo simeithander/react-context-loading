@@ -8,12 +8,14 @@ import Loading from "../../Components/LoadingPage";
 import { sleep } from "../..";
 
 const Profile = () => {
-  const bgColor = useColorModeValue("white", "gray.800");
+  // Hook global do Context
   const { showFollowers, setLoadingText, setLoading } = useContext(ContextAPI);
-
-  // Carrega os componentes
+  // Hook local do componente
   const [loadingComponents, setLoadingComponents] = useState<boolean>(true);
+  // Chakra UI
+  const bgColor = useColorModeValue("white", "gray.800");
 
+  // Função que obtem os dados da API no carregamento da página
   const handleGetData = async () => {
     setLoadingText("profile");
     setLoading(true);
@@ -30,6 +32,7 @@ const Profile = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Enquando não é obtido os dados da API, a tela mostra um loading
   if (loadingComponents) return <Loading />;
   else
     return (

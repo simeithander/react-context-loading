@@ -9,6 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <ChakraProvider>
+    {/* Context Global da aplicação */}
     <ContextProvider>
       <React.StrictMode>
         <RoutesPath />

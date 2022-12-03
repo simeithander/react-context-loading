@@ -16,7 +16,9 @@ import { ContextAPI } from "../Contexts/Global";
 import { LocalContextAPI } from "../Contexts/Local";
 
 const FormUser = () => {
+  // Hooks global do Context
   const { user, setShowFollowers, showFollowers } = useContext(ContextAPI);
+  // Hooks local do Context de Usuários
   const { users, setUsers } = useContext(LocalContextAPI);
 
   return (

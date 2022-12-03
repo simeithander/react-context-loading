@@ -11,8 +11,9 @@ import { useContext } from "react";
 import { ContextAPI } from "../Contexts/Global";
 
 const Loading = () => {
+  // Chakra UI
   const bgColor = useColorModeValue("white", "gray.800");
-  // Context
+  // Context global
   const { loading, loadingText } = useContext(ContextAPI);
   return (
     <Fade in={loading}>

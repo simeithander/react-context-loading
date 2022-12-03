@@ -6,11 +6,13 @@ import {
   useState,
 } from "react";
 
-interface IUser {
+// Interface com os dados do usuário
+export interface IUser {
   name: string;
   email: string;
 }
 
+// Interface que o ContextAPI vai oferecer (variáveis ou funções)
 interface IContextAPI {
   loadingText: string;
   setLoadingText: Dispatch<SetStateAction<string>>;
@@ -22,6 +24,7 @@ interface IContextAPI {
   setUser: Dispatch<SetStateAction<IUser>>;
 }
 
+// Interface do componente principal
 interface IContextProvider {
   children: ReactNode;
 }
@@ -30,10 +33,13 @@ export const ContextAPI = createContext({} as IContextAPI);
 
 // Provider para manipualão do login e cookies
 const ContextProvider = ({ children }: IContextProvider) => {
+  // Hooks locais do Provider
   const [loading, setLoading] = useState<boolean>(true);
   const [loadingText, setLoadingText] = useState<string>("");
   const [showFollowers, setShowFollowers] = useState<boolean>(false);
   const [user, setUser] = useState<IUser>({ name: "", email: "" });
+
+  // Componente Provider
   return (
     <ContextAPI.Provider
       value={{

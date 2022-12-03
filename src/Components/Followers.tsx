@@ -16,10 +16,13 @@ import { LocalContextAPI } from "../Contexts/Local";
 import LoadingComponent from "./LoadingComponent";
 
 const Followers = () => {
+  // Hooks global do Context
   const { users } = useContext(LocalContextAPI);
   const { setLoadingText, setLoading } = useContext(ContextAPI);
+  // Hooks local do componente
   const [loadingComponents, setLoadingComponents] = useState<boolean>(true);
 
+  // Função que obtem os dados da API no carregamento da página
   const handleGetData = async () => {
     setLoadingText("followers");
     setLoadingComponents(true);
